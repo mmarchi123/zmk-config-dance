@@ -13,4 +13,6 @@ if SHIELD_DANCE_LEFT || SHIELD_DANCE_RIGHT
 config ZMK_SPLIT
     default y
 
+config CONFIG_BT_CTLR_TX_PWR_PLUS_8
+    default y
 endif
