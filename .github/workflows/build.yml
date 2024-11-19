@@ -15,6 +15,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
+          git pull origin ${{ github.ref }} --rebase
           git add ./config/boards/shields/dance/dance.keymap
           git commit -m 'chore: copy keymap file'
           git push origin ${{ github.ref }}
