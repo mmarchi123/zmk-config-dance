@@ -205,6 +205,11 @@
             bindings = <&mkp RCLK>;
             key-positions = <23 24>;
         };
+
+        combo_mouse_mid {
+            bindings = <&mkp MCLK>;
+            key-positions = <3 4>;
+        };
     };
 
     keymap {
