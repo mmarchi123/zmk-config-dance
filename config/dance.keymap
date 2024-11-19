@@ -117,6 +117,7 @@
         cmb_bspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 17>;
+            timeout-ms = <80>;
         };
 
         cmb_del {
