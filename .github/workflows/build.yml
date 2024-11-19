@@ -1,36 +1,42 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  copy:
+  setup:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v3
-      - name: 'Copy keymap file'
-        run: |
-          mkdir -p ./config/boards/shields/dance/
-          cp ./config/dance.keymap ./config/boards/shields/dance/dance.keymap
-      - name: 'Commit copied file'
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Copy and commit keymap file'
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git pull origin ${{ github.ref }} --rebase
+          mkdir -p ./config/boards/shields/dance/
+          cp ./config/dance.keymap ./config/boards/shields/dance/dance.keymap
           git add ./config/boards/shields/dance/dance.keymap
           git commit -m 'chore: copy keymap file'
-          git push origin ${{ github.ref }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
   
   build:
-    needs: copy
+    needs: setup
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   
   doc:
-      needs: copy
+      needs: setup
       runs-on: ubuntu-latest
       permissions:
         contents: write
       steps:
         - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
         - uses: actions/setup-python@v4
           with:
             python-version: '3.10'
