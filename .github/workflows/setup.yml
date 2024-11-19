@@ -1,5 +1,5 @@
 name: Setup
- 
+
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
@@ -13,14 +13,10 @@ jobs:
         run: |
           mkdir -p ./config/boards/shields/dance/
           cp ./config/dance.keymap ./config/boards/shields/dance/dance.keymap
-      - name: 'Commit copied file'
-        run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add ./config/boards/shields/dance/dance.keymap
-          git commit -m 'chore: copy keymap file'
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add ./config/boards/shields/dance/dance.keymap
+            git commit -m 'chore: copy keymap file'
+            git push origin ${{ github.ref }}
+          fi
