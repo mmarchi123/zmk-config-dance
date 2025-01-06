@@ -19,20 +19,3 @@
         , <&pro_micro 21 GPIO_ACTIVE_HIGH>
         ;
 };
-
-&i2c0 {
-    status = "okay";
-    clock-frequency = <400000>;
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    trackpad: trackpad@2A {
-        compatible = "cirque,pinnacle";
-        reg = <0x2A>;
-        dr-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
-        x-axis-z-min = <5>;
-        y-axis-z-min = <4>;
-        sensitivity = "2x";
-        rotate-90;
-    };
-};
