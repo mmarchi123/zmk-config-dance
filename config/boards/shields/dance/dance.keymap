@@ -24,8 +24,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <NUM NAV>;
-            then-layer = <FUN>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -218,24 +218,13 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W                     &kp E                 &kp R    &kp T                       &kp Y                  &kp U    &kp I                  &kp O                      &kp P
-&kp A  &hold_tap LEFT_CONTROL S  &hold_tap LEFT_ALT D  &kp F    &hold_tap LA(LEFT_SHIFT) G  &hold_tap LS(LC(L)) H  &kp J    &hold_tap RIGHT_ALT K  &hold_tap RIGHT_CONTROL L  &kp SEMI
-&kp Z  &kp X                     &kp C                 &kp V    &kp B                       &kp N                  &kp M    &kp COMMA              &dot_colon                 &qmrk_excl
-                                 &kp LGUI              &sl NUM  &smart_shft                 &kp SPACE              &sl NAV  &bspc_del
+&kp Q  &kp W                     &kp E                 &kp R  &kp T                       &kp Y                  &kp U  &kp I                  &kp O                      &kp P
+&kp A  &hold_tap LEFT_CONTROL S  &hold_tap LEFT_ALT D  &kp F  &hold_tap LA(LEFT_SHIFT) G  &hold_tap LS(LC(L)) H  &kp J  &hold_tap RIGHT_ALT K  &hold_tap RIGHT_CONTROL L  &kp SEMI
+&kp Z  &kp X                     &kp C                 &kp V  &kp B                       &kp N                  &kp M  &kp COMMA              &dot_colon                 &qmrk_excl
+                                 &kp LGUI              &sl 1  &smart_shft                 &kp SPACE              &sl 2  &bspc_del
             >;
 
             label = "Qwerty";
-        };
-
-        colemak_layer {
-            bindings = <
-&kp Q  &kp W  &kp F   &kp P   &kp B   &kp J   &kp L   &kp U        &kp Y       &kp APOS
-&kp A  &kp R  &kp S   &kp T   &kp G   &kp M   &kp N   &kp E        &kp I       &kp O
-&kp Z  &kp X  &kp C   &kp D   &kp V   &kp K   &kp H   &comma_semi  &dot_colon  &qmrk_excl
-              &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "Colemak";
         };
 
         num_layer {
@@ -262,7 +251,7 @@
 
         fun_layer {
             bindings = <
-&tog COLEMAK  &bt BT_CLR    &trans        &sys_reset    &out OUT_TOG  &trans  &kp F7  &kp F8  &kp F9  &kp F12
+&trans        &bt BT_CLR    &trans        &sys_reset    &out OUT_TOG  &trans  &kp F7  &kp F8  &kp F9  &kp F12
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans        &trans        &trans        &trans        &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10
                             &trans        &trans        &trans        &trans  &trans  &trans
