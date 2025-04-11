@@ -718,15 +718,14 @@ path {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(148, 84)" class="key trans keypos-12">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(148, 84)" class="key keypos-12">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
+<a href="#nav2">
+<text x="0" y="0" class="key tap layer-activator">nav2</text>
+</a><text x="0" y="24" class="key hold">sticky</text>
 </g>
 <g transform="translate(208, 106)" class="key held keypos-13">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
-<a href="#nav2">
-<text x="0" y="0" class="key held tap layer-activator">nav2</text>
-</a><text x="0" y="24" class="key held hold">sticky</text>
 </g>
 <g transform="translate(267, 114)" class="key trans keypos-14">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
@@ -1829,9 +1828,8 @@ path {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(148, 84)" class="key trans keypos-12">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(148, 84)" class="key held keypos-12">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
 </g>
 <g transform="translate(208, 106)" class="key held keypos-13">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
