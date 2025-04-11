@@ -114,6 +114,7 @@
             bindings = <&kp R>, <&kp TAB>;
 
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
 
         w_shiftTab: w_shiftTab {
@@ -123,6 +124,7 @@
             bindings = <&kp W>, <&kp LS(TAB)>;
 
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
     };
 
