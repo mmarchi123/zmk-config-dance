@@ -269,6 +269,13 @@
             bindings = <&kp N0 &kp N0 &kp N0>;
             label = "ZEROES";
         };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE";
+        };
     };
 
     keymap {
@@ -298,10 +305,10 @@
 
         nav_layer {
             bindings = <
-&kp TAB    &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp RA(W)  &trans    &kp HOME  &kp END  &trans     &trans
-&sk LSHFT  &sk LCTRL   &sk LALT      &sk LGUI      &kp RA(A)  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp ESC
-&trans     &kp C_PREV  &kp C_PP      &kp C_NEXT    &kp RA(O)  &trans    &kp RET   &trans   &trans     &trans
-                       &trans        &trans        &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &kp HOME       &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &kp END
+&trans  &trans  &trans  &sl 6   &trans  &kp LEFT       &kp DOWN          &kp UP             &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans
+                &trans  &trans  &trans  &kp BACKSPACE  &kp DELETE        &trans
             >;
 
             label = "Navigation";
@@ -333,6 +340,15 @@
 &kp LCTRL  &kp HASH       &kp PLUS        &kp EQUAL          &kp ASTERISK  &kp EXCLAMATION  &kp COLON      &kp TILDE         &kp PIPE       &trans
 &kp MINUS  &kp AMPERSAND  &kp SQT         &kp DOUBLE_QUOTES  &kp GRAVE     &kp UNDERSCORE   &kp LESS_THAN  &kp GREATER_THAN  &arrow         &trans
                           &trans          &trans             &trans        &trans           &trans         &trans
+            >;
+        };
+
+        nav2 {
+            bindings = <
+&trans            &trans  &trans  &trans  &trans  &trans              &trans          &trans  &trans         &trans
+&kp LS(LC(LEFT))  &trans  &trans  &trans  &trans  &kp LC(LEFT_ARROW)  &trans          &trans  &kp LC(RIGHT)  &kp LS(LC(RIGHT))
+&trans            &trans  &trans  &trans  &trans  &trans              &select_line    &trans  &trans         &trans
+                          &trans  &trans  &trans  &kp LC(BACKSPACE)   &kp LC(DELETE)  &trans
             >;
         };
     };
