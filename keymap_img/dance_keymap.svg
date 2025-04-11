@@ -80,10 +80,7 @@ path {
 </g>
 <g transform="translate(89, 48)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.0em">Alt+Sft</tspan><tspan x="0" dy="1.2em">+↹</tspan>
-</text>
-<text x="0" y="-24" class="key shifted">W</text>
+<text x="0" y="0" class="key tap">W</text>
 </g>
 <g transform="translate(148, 28)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -91,8 +88,7 @@ path {
 </g>
 <g transform="translate(208, 50)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">Alt+↹</text>
-<text x="0" y="-24" class="key shifted">R</text>
+<text x="0" y="0" class="key tap">R</text>
 </g>
 <g transform="translate(267, 58)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
