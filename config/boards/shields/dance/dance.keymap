@@ -329,10 +329,10 @@
 
         symbol {
             bindings = <
-&kp GRAVE  &kp AT_SIGN    &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PERCENT   &kp DOLLAR       &kp LS(NON_US_BACKSLASH)  &kp SLASH         &kp QUESTION  &trans
-&kp LCTRL  &kp HASH       &kp PLUS        &kp EQUAL          &kp ASTERISK  &kp EXCLAMATION  &kp COLON                 &kp TILDE         &kp PIPE      &trans
-&kp MINUS  &kp AMPERSAND  &kp SQT         &kp DOUBLE_QUOTES  &kp GRAVE     &kp UNDERSCORE   &kp LESS_THAN             &kp GREATER_THAN  &arrow        &trans
-                          &trans          &trans             &trans        &trans           &trans                    &trans
+&kp GRAVE  &kp AT_SIGN    &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PERCENT   &kp DOLLAR       &kp QUESTION   &kp SLASH         &kp BACKSLASH  &trans
+&kp LCTRL  &kp HASH       &kp PLUS        &kp EQUAL          &kp ASTERISK  &kp EXCLAMATION  &kp COLON      &kp TILDE         &kp PIPE       &trans
+&kp MINUS  &kp AMPERSAND  &kp SQT         &kp DOUBLE_QUOTES  &kp GRAVE     &kp UNDERSCORE   &kp LESS_THAN  &kp GREATER_THAN  &arrow         &trans
+                          &trans          &trans             &trans        &trans           &trans         &trans
             >;
         };
     };
