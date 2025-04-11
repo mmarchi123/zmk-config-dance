@@ -212,11 +212,6 @@
             key-positions = <11 12>;
         };
 
-        cmb_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <4 3>;
-        };
-
         cmb_mouse_left {
             bindings = <&mkp LCLK>;
             key-positions = <14 13>;
@@ -229,7 +224,7 @@
 
         combo_mouse_mid {
             bindings = <&mkp MCLK>;
-            key-positions = <0 1>;
+            key-positions = <4 3>;
         };
 
         SnipTool {
