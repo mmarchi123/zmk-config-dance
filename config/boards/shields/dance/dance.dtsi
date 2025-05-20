@@ -63,20 +63,14 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     };
 };
 
-&i2c0 {
-    status = "okay";
-    clock-frequency = <400000>;
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    trackpad: trackpad@2A {
-        initialization-delay-ms = <100>;
+    glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
-        reg = <0x2A>;
-        dr-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
-        x-axis-z-min = <5>;
-        y-axis-z-min = <4>;
+        reg = <0x2a>;
+        status = "okay";
+        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
         sensitivity = "2x";
-        rotate-90;
+        sleep;
+        //no-taps;
+        y-invert;
     };
 };
