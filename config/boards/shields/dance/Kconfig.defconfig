@@ -8,6 +8,14 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+if SHIELD_DANCE_RIGHT
+
+config ZMK_POINTING
+    default y
+config I2C
+	default y
+endif
+
 if SHIELD_DANCE_LEFT || SHIELD_DANCE_RIGHT
 
 config ZMK_SPLIT
